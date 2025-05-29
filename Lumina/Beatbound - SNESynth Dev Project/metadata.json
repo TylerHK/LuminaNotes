@@ -1,0 +1,22 @@
+{
+  "title": "Beatbound – SNESynth Dev Project",
+  "description": "Tool that converts live voice input into SNES‑style audio.",
+  "status": "In progress",
+  "last_updated": "2025-05-27",
+  "next_steps": [
+    "Rebuild project zip with working code + core .wav files",
+    "Finish ROM extraction wrapper",
+    "Package modules into prototype",
+    "Gather user feedback"
+  ],
+  "key_assets": [
+    "beatbound.py",
+    "record.py",
+    "processor.py",
+    "talkbox_test.py",
+    "README.md",
+    "start_here.txt",
+    "presets/aloboi_memory.json",
+    "presets/snappy_90bpm.json"
+  ]
+}
