@@ -12,6 +12,8 @@ dist/
 *.ipynb
 
 # Large binary assets
+*.zip
+*.png
 *.mid
 *.midi
 *.svg
