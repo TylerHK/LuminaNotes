@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Validate JSON files
+        run: |
+          python - <<'PY'
+import json
+import pathlib
+import jsonschema
+for path in pathlib.Path('.').rglob('*.json'):
+    with open(path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    jsonschema.validate(data, {})
+print('All JSON files are valid')
+PY
+      - name: Run tests
+        run: pytest -v
