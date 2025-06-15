@@ -3,7 +3,7 @@
 import random
 
 
-def generate_examples(num:int=1):
+def generate_examples(num: int = 1):
     """Return a list of simple synthetic text strings."""
     examples = []
     for _ in range(num):
