@@ -2,3 +2,4 @@ jsonschema
 pytest
 torch
 transformers
+numpy
