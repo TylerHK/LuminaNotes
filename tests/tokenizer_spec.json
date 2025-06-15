@@ -1,0 +1,5 @@
+{
+  "tokenizer": "simple",
+  "vocab_size": 256,
+  "special_tokens": {"pad_token": "<PAD>"}
+}

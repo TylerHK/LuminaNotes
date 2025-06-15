@@ -1,0 +1,4 @@
+jsonschema
+pytest
+torch
+transformers

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Large binary assets
+*.mid
+*.midi
+*.svg
+
+# Environment
+.env
+*.env
+
+# Misc
+.DS_Store
