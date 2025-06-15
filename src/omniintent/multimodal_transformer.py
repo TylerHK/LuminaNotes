@@ -1,5 +1,6 @@
 """Placeholder transformer implementation."""
 
+
 class MultimodalTransformer:
     """A stub multimodal transformer model."""
 

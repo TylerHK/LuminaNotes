@@ -1,0 +1,3 @@
+This folder will hold fifteen new Echoes capsules along with their JSON, CSV,
+and SVG exports after Sprint-05. The contents are placeholders until that
+release.

@@ -17,3 +17,8 @@ Large media assets are stored using Git LFS to keep the repository lightweight.
 - `tests/` – Pytest suites and tokenizer specs.
 - `data/` – Bundled data packages stored via Git LFS.
 - `.github/workflows/` – Continuous integration configuration.
+
+## Roadmap
+- Sprint-05 - 15 new capsules & Morphology v0.6.
+- Sprint-06 - Creative Pack v0.2 with micro-fiction chapter 1.
+- Sprint-07 - OmniIntent real-sensor integration.
