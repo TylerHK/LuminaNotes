@@ -3,3 +3,8 @@ pytest
 torch
 transformers
 numpy
+jupyter
+pandas
+matplotlib
+typer
+
