@@ -38,6 +38,13 @@ for path in pathlib.Path('.').rglob('*.json'):
     jsonschema.validate(data, {})
 print('All JSON files are valid')
 PY
+      - name: Validate BestWay recipes
+        run: |
+          if ls data/bestway_recipes/*.json 1> /dev/null 2>&1; then
+            for f in data/bestway_recipes/*.json; do
+              python -m jsonschema bestway/schema/bestway_schema.json "$f"
+            done
+          fi
       - name: Check formatting
         run: |
           black --check src tests

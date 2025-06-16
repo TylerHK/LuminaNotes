@@ -7,4 +7,5 @@ jupyter
 pandas
 matplotlib
 typer
+pyyaml
 

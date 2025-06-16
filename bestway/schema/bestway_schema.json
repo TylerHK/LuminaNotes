@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {"type": "string"},
+    "context": {"type": "string"},
+    "materials": {"type": "array", "items": {"type": "string"}},
+    "steps": {"type": "array", "items": {"type": "string"}},
+    "alt_styles": {"type": "array", "items": {"type": "string"}},
+    "sources": {"type": "array", "items": {"type": "string"}}
+  },
+  "required": ["title", "context", "materials", "steps", "alt_styles", "sources"]
+}

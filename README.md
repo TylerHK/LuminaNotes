@@ -22,3 +22,10 @@ Large media assets are stored using Git LFS to keep the repository lightweight.
 - Sprint-05 - 15 new capsules & Morphology v0.6.
 - Sprint-06 - Creative Pack v0.2 with micro-fiction chapter 1.
 - Sprint-07 - OmniIntent real-sensor integration.
+
+## BestWay & Video Roadmap
+
+| Sprint | Focus | Media |
+|--------|-------|-------|
+| Sprint-08 | Build BestWay scaffold and ingestion CLI | Video 01 storyboard |
+| Sprint-09 | Expand recipe collection | Video 02 storyboard |
