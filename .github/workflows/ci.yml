@@ -43,4 +43,4 @@ PY
           black --check src tests
           isort --check src tests
       - name: Run tests
-        run: pytest -v
+        run: pytest -v tests
