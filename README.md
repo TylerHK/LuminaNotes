@@ -29,3 +29,4 @@ Large media assets are stored using Git LFS to keep the repository lightweight.
 |--------|-------|-------|
 | Sprint-08 | Build BestWay scaffold and ingestion CLI | Video 01 storyboard |
 | Sprint-09 | Expand recipe collection | Video 02 storyboard |
+| Sprint-12 | Crossroads warning narrative | Video 05 storyboard |
