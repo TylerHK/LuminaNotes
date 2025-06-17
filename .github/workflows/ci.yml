@@ -51,3 +51,5 @@ PY
           isort --check src tests
       - name: Run tests
         run: pytest -v tests
+      - name: Run macro recorder tests
+        run: pytest tests/test_macro_recorder.py

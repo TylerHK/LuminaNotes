@@ -30,3 +30,19 @@ Large media assets are stored using Git LFS to keep the repository lightweight.
 | Sprint-08 | Build BestWay scaffold and ingestion CLI | Video 01 storyboard |
 | Sprint-09 | Expand recipe collection | Video 02 storyboard |
 | Sprint-12 | Crossroads warning narrative | Video 05 storyboard |
+
+## Macro Recorder
+
+The `omniintent` package includes a simple macro recorder to capture demo sessions.
+
+Record a session using the transformer demo:
+
+```bash
+python -m omniintent.multimodal_transformer demo --record --macro-path macros/demo.json
+```
+
+Convert the recorded macro to Markdown and a timeline plot:
+
+```bash
+python tools/macro_to_markdown.py macros/demo.json --markdown-out demo.md --png-out demo.png
+```
