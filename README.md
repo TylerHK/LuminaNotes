@@ -46,3 +46,14 @@ Convert the recorded macro to Markdown and a timeline plot:
 ```bash
 python tools/macro_to_markdown.py macros/demo.json --markdown-out demo.md --png-out demo.png
 ```
+
+## BeatBound
+
+BeatBound contains a small audio playground driven by Vite.
+
+Quick start:
+
+```bash
+npm i
+npm run dev
+```
