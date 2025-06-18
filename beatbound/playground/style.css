@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    margin: 0 10px;
+    padding: 6px 12px;
+}
