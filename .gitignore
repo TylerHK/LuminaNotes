@@ -17,6 +17,7 @@ dist/
 *.mid
 *.midi
 *.svg
+!docs/*.svg
 
 # Environment
 .env

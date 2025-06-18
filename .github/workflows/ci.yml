@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install black isort
+          pip install black isort codespell
       - name: Preview notice
         if: startsWith(github.ref_name, 'feature/')
         run: echo "::notice title=Preview::You are building a feature branch"
@@ -60,3 +60,7 @@ PY
         run: npm install
       - name: Lint talkbox
         run: npx eslint beatbound/playground/talkbox.js
+      - name: Check documentation links
+        run: npx markdown-link-check docs/**/*.md
+      - name: Spell check docs
+        run: codespell docs/**/*.md
