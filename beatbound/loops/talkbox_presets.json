@@ -1,0 +1,6 @@
+{
+  "presets": [
+    {"name": "Robot Talk", "settings": {"formant": 1.2, "depth": 0.8}},
+    {"name": "Smooth Vocals", "settings": {"formant": 0.9, "depth": 0.5}}
+  ]
+}

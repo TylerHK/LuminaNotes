@@ -1,0 +1,22 @@
+---
+title: Solar Dehydrator
+context: Build a simple dehydrator using recycled materials and solar heat.
+materials:
+  - cardboard box
+  - clear plastic wrap
+  - small fan
+  - drying racks
+steps:
+  - Cut vents near the bottom of the box.
+  - Cover the top with plastic wrap to let sunlight in.
+  - Place racks inside and set fan to circulate air.
+alt_styles:
+  - Use a dark-painted metal box for more heat.
+  - Add reflective panels to focus sunlight.
+sources:
+  - https://example.com/solar-dehydrator
+---
+
+# Solar Dehydrator
+
+Detailed build instructions go here.
