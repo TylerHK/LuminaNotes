@@ -8,7 +8,9 @@ import typer
 app = typer.Typer(add_completion=False)
 
 
-def compute_payments(pop: int, gdp: float, ai_share: float, dividend_pct: float, years: int) -> pd.DataFrame:
+def compute_payments(
+    pop: int, gdp: float, ai_share: float, dividend_pct: float, years: int
+) -> pd.DataFrame:
     """Return a DataFrame with annual per-capita payment."""
     data = []
     for year in range(years):
@@ -32,4 +34,3 @@ def main(
 
 if __name__ == "__main__":  # pragma: no cover
     app()
-

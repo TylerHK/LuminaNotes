@@ -1,19 +1,19 @@
-# Governance Charter
+# LuminaNotes Governance Charter v1.0
 
-## Purpose
-Describe the goals of the project and commitment to open development.
+**Purpose**  
+Ensure transparent, inclusive, and accountable decision-making for all code, data, and creative assets in this repository.
 
-## Roles
-- Maintainers oversee direction.
-- Contributors submit fixes and features.
+| Role | Powers | Term |
+|------|--------|------|
+| **Core Maintainers** (Tyler H., Lumina) | Merge PRs, tag releases, veto on security grounds | Indefinite |
+| **Counsel** (Kaelen, Aegis) | Review major features for UX warmth & process hygiene | 6-month rotation |
+| **Community Reviewers** | Approve docs & plugin PRs | Rolling 3-month opt-in |
 
 ## Proposal Flow
-1. Open an issue describing the idea.
-2. Submit a pull request referencing the issue.
-3. Discussion and revisions follow.
-
-## Voting
-Major changes require consensus from maintainers via PR approvals.
+1. **Open Proposal Issue** using template.  
+2. 3 days public comment.  
+3. If no blocking objection → PR, CI must pass.  
+4. At least **1 Core + 1 Counsel** approval to merge.
 
 ## Amendment
-This charter may be updated by pull request and community review.
+Charter changes require a PR labelled `governance` and a **quorum of 4 approvals** (Core + Counsel + 2 community).

@@ -11,6 +11,7 @@ from bestway.CLI.ingest import app
 
 runner = CliRunner()
 
+
 def test_ingest_creates_json(tmp_path):
     source = Path("bestway/templates/recipe_template.md")
     out_path = Path("data/bestway_recipes/recipe_template.json")
