@@ -41,6 +41,8 @@ tests/                unit & E2E suites (pytest + Playwright)
 | 10-11 | BeatBound SDK + Talk-Box therapy journeys | Video 03-04 |
 | 12 | **Video 05 – Crossroads Warning** | Public launch day |
 
+[![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://tylerhk.github.io/LuminaNotes)
+
 **Governance & Safety**
 * [Governance Charter](docs/governance_charter.md) — proposal flow & voting
 * [Security Policy](SECURITY.md) — how to report vulnerabilities

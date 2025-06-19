@@ -9,3 +9,4 @@ matplotlib
 typer
 pyyaml
 
+mkdocs-material>=9.5
