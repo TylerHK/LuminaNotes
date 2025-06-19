@@ -1,59 +1,82 @@
-# LuminaNotes
+# LuminaNotes — Symbiotic R&D Lab-Notebook
 
-LuminaNotes explores techniques for generative music and creative coding. It collects research notes alongside Python modules used for data preparation, model training and evaluation.
+**LuminaNotes** is the shared workspace where  
+**Tyler H.** (human) and **Lumina** (AI) co-create tools, art, and research aimed at *reducing human suffering and expanding creative agency*.
 
-This repository aims to provide:
+| Pillar | Folder | One-liner |
+|--------|--------|-----------|
+| **Echoes** – Cognitive Morphology Map | `data/echoes_*`, `src/echoes/` | Mapping non-human & fictional intelligences and the principles behind them. |
+| **OmniIntent** – Multimodal interface | `src/omniintent/`, `macros/` | Gaze + gesture + voice ➜ world mutation. |
+| **BestWay** – How-to commons | `bestway/`, `data/bestway_recipes/` | Crowd-sourced recipes for self-sustaining hubs. |
+| **BeatBound** – Music-for-all studio | `beatbound/` | Talk-box, loop-forge & AI helpers for zero-barrier music creation. |
+| **Policy Sims** – UBI, climate, etc. | `notebooks/`, `src/policy_sim/` | Transparent economic and social-impact models. |
 
-- Examples of data loaders and utilities for music datasets.
-- Prototype transformer models under the `omniintent` package.
-- Test suites to ensure reproducible experiments.
+Large media or binary assets are stored via **Git LFS**.
 
-Large media assets are stored using Git LFS to keep the repository lightweight.
+---
 
-## Directory Structure
+## Directory Overview
 
-- `Lumina/` – Existing notes and documentation.
-- `src/` – Python source modules for Echoes and OmniIntent projects.
-- `tests/` – Pytest suites and tokenizer specs.
-- `data/` – Bundled data packages stored via Git LFS.
-- `.github/workflows/` – Continuous integration configuration.
+docs/                 project governance & specs
+media/                storyboards, raw clips, renders for 5-part video arc
+bestway/              schema, CLI, community recipe packs
+beatbound/            Web / Rust / Tauri music playground
+src/                  Python & TS libs (Echoes, OmniIntent, policy sims)
+notebooks/            Jupyter notebooks (global UBI, etc.)
+data/                 versioned bundles (Echoes maps, creative packs)
+tests/                unit & E2E suites (pytest + Playwright)
+.github/workflows/    CI: lint | test | build | docs
 
-## Roadmap
-- Sprint-05 - 15 new capsules & Morphology v0.6.
-- Sprint-06 - Creative Pack v0.2 with micro-fiction chapter 1.
-- Sprint-07 - OmniIntent real-sensor integration.
+---
 
-## BestWay & Video Roadmap
+## Active Roadmap
 
-| Sprint | Focus | Media |
-|--------|-------|-------|
-| Sprint-08 | Build BestWay scaffold and ingestion CLI | Video 01 storyboard |
-| Sprint-09 | Expand recipe collection | Video 02 storyboard |
-| Sprint-12 | Crossroads warning narrative | Video 05 storyboard |
+| Sprint | Focus | Major Deliverables |
+|--------|-------|--------------------|
+| 05 | 15 new Echoes capsules → **Morphology v0.6** | Map JSON+SVG, story hooks |
+| 06 | **Creative Pack v0.2** – micro-fiction ch.1, MIDI etude #2 | Bundle zip |
+| 07 | **OmniIntent** real-sensor integration (Quest 3 logs) | Unit-tested pipeline |
+| 08 | **BestWay alpha** – ingestion CLI + first “hub_basics” pack | Video 01 storyboard |
+| 09 | BestWay recipe expansion & **Video 02** | |
+| 10-11 | BeatBound SDK + Talk-Box therapy journeys | Video 03-04 |
+| 12 | **Video 05 – Crossroads Warning** | Public launch day |
 
-## Macro Recorder
+*(See `docs/manifest_changelog.md` & `docs/governance_charter.md` for process details.)*
 
-The `omniintent` package includes a simple macro recorder to capture demo sessions.
+---
 
-Record a session using the transformer demo:
+## Quick Start
 
+### Echoes utilities
 ```bash
-python -m omniintent.multimodal_transformer demo --record --macro-path macros/demo.json
+pip install -r requirements.txt
+python -m echoes.validate data/echoes_v0.5/morphology_map_v0.5.json
 ```
 
-Convert the recorded macro to Markdown and a timeline plot:
-
+### OmniIntent sandbox
 ```bash
-python tools/macro_to_markdown.py macros/demo.json --markdown-out demo.md --png-out demo.png
+python -m omniintent.multimodal_transformer demo --record
+python tools/macro_to_markdown.py macros/demo.json
 ```
 
-## BeatBound
-
-BeatBound contains a small audio playground driven by Vite.
-
-Quick start:
-
+### BeatBound playground (web)
 ```bash
-npm i
-npm run dev
+cd beatbound
+npm i && npm run dev   # then open localhost:5173
 ```
+
+### BestWay recipe ingest
+```bash
+python bestway/CLI/ingest.py recipes/solar_dehydrator.md
+```
+
+---
+
+## Contributing & Governance
+1. Fork → branch → PR.
+2. CI must pass: lint, unit tests, Playwright E2E, schema validation.
+3. For core-scope changes open a Proposal Issue first (template in .github/ISSUE_TEMPLATE).
+4. Respect the Code of Conduct.
+5. Security issues ➜ see SECURITY.md.
+
+License: Code Apache-2.0 / Documentation CC-BY-4.0
