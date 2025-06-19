@@ -1,0 +1,19 @@
+{
+  "branches": ["main"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    ["@semantic-release/changelog", {
+      "changelogFile": "CHANGELOG.md"
+    }],
+    ["@semantic-release/git", {
+      "assets": ["CHANGELOG.md"]
+    }],
+    ["@semantic-release/github", {
+      "assets": [
+        {"path": "data/echoes_v0.5_bundle.zip", "label": "Echoes v0.5 bundle"},
+        {"path": "data/creative_pack_v0.1.zip", "label": "Creative Pack v0.1"}
+      ]
+    }]
+  ]
+}
