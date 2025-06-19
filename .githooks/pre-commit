@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+large=$(git diff --cached --name-only | xargs -I{} bash -c '[[ -f "{}" ]] && [[ $(stat -c%s "{}") -gt 5242880 ]] && echo "{}"')
+if [[ ! -z "$large" ]]; then
+  echo "❌  The following files exceed 5\u2009MB and are not LFS-tracked:"
+  echo "$large"
+  echo "Add them via: git lfs track <pattern> && git add .gitattributes <files>"
+  exit 1
+fi

@@ -23,6 +23,13 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install black isort codespell
+      - name: Check for large non-LFS files
+        run: |
+          git ls-files | while read f; do
+            if [[ $(stat -c%s "$f") -gt 5242880 && $(git check-attr --all -- "$f" | grep -c "filter: lfs") -eq 0 ]]; then
+              echo "::error file=$f::File >5\u2009MB not LFS-tracked"; exit 1
+            fi
+          done
       - name: spell-check docs
         run: |
           pip install codespell
