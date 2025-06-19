@@ -41,7 +41,11 @@ tests/                unit & E2E suites (pytest + Playwright)
 | 10-11 | BeatBound SDK + Talk-Box therapy journeys | Video 03-04 |
 | 12 | **Video 05 – Crossroads Warning** | Public launch day |
 
-*(See `docs/manifest_changelog.md` & `docs/governance_charter.md` for process details.)*
+**Governance & Safety**
+* [Governance Charter](docs/governance_charter.md) — proposal flow & voting
+* [Security Policy](SECURITY.md) — how to report vulnerabilities
+* [Code of Conduct](CODE_OF_CONDUCT.md) — community norms
+* [Manifest Changelog](docs/manifest_changelog.md)
 
 ---
 
