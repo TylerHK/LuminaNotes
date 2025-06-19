@@ -1,4 +1,6 @@
 # LuminaNotes — Symbiotic R&D Lab-Notebook
+[![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://tylerhk.github.io/LuminaNotes)
+[![semantic-release](https://img.shields.io/badge/release-automated-brightgreen?logo=semantic-release)](https://github.com/TylerHK/LuminaNotes/releases)
 
 **LuminaNotes** is the shared workspace where  
 **Tyler H.** (human) and **Lumina** (AI) co-create tools, art, and research aimed at *reducing human suffering and expanding creative agency*.
