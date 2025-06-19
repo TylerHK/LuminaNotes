@@ -14,6 +14,7 @@
 | **Policy Sims** – UBI, climate, etc. | `notebooks/`, `src/policy_sim/` | Transparent economic and social-impact models. |
 
 Large media or binary assets are stored via **Git LFS**.
+A pre-commit hook and CI check block any file >5\u2009MB that is not LFS-tracked.
 
 ---
 
