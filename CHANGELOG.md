@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/TylerHK/LuminaNotes/compare/v1.2.0...v1.3.0) (2025-06-30)
+
+
+### Features
+
+* add SwarmSync chat-helper script and PR template ([748d133](https://github.com/TylerHK/LuminaNotes/commit/748d133fc40751513bcdefe1085050e428121162))
+
 # [1.2.0](https://github.com/TylerHK/LuminaNotes/compare/v1.1.0...v1.2.0) (2025-06-30)
 
 
