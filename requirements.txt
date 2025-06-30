@@ -10,3 +10,4 @@ typer
 pyyaml
 
 mkdocs-material>=9.5
+PyGithub>=2.3

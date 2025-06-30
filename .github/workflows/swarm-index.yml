@@ -1,0 +1,29 @@
+name: swarm-index
+on:
+  schedule:
+    - cron: '15 * * * *'    # hourly
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: build index
+        run: |
+          python - <<'PY'
+          import json, glob, pathlib
+          packets = []
+          for p in glob.glob('swarm_sync/*.json'):
+              packets.append(json.load(open(p)))
+          # simple index {keyword: [timestamps]}
+          index={}
+          for pkt in packets:
+              index.setdefault(pkt['keyword'],[]).append(pkt['timestamp'])
+          pathlib.Path('swarm_sync/swarm_index.json').write_text(json.dumps(index,indent=2))
+          PY
+      - name: commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update swarm index"
+          file_pattern: swarm_sync/swarm_index.json

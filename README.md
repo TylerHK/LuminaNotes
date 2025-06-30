@@ -79,6 +79,11 @@ npm i && npm run dev   # then open localhost:5173
 python bestway/CLI/ingest.py recipes/solar_dehydrator.md
 ```
 
+### SwarmSync (cross‑chat memory)
+
+`!sync-to hive <keyword>` → posts the last\u00A0N messages to GitHub.  
+`?hive <keyword>`        → pulls summaries from other chats.
+
 ---
 
 ## Contributing & Governance
