@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/TylerHK/LuminaNotes/compare/v1.1.0...v1.2.0) (2025-06-30)
+
+
+### Features
+
+* add SwarmSync helper and template ([4315d58](https://github.com/TylerHK/LuminaNotes/commit/4315d58287be2bc4ac04b00fb6c05e457f2639c9))
+
 # [1.1.0](https://github.com/TylerHK/LuminaNotes/compare/v1.0.0...v1.1.0) (2025-06-30)
 
 
