@@ -81,8 +81,13 @@ python bestway/CLI/ingest.py recipes/solar_dehydrator.md
 
 ### SwarmSync (cross‑chat memory)
 
-`!sync-to hive <keyword>` → posts the last\u00A0N messages to GitHub.  
+`!sync-to hive <keyword>` → posts the last\u00A0N messages to GitHub.
 `?hive <keyword>`        → pulls summaries from other chats.
+
+```bash
+# helper from any terminal
+python scripts/sync_helper.py path/to/chat.log omniintent myChatGPT
+```
 
 ---
 
