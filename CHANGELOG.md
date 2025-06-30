@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/TylerHK/LuminaNotes/compare/v1.0.0...v1.1.0) (2025-06-30)
+
+
+### Features
+
+* SwarmSync scaffold (cross-chat memory via GitHub) ([ad61a8b](https://github.com/TylerHK/LuminaNotes/commit/ad61a8b0ac36cebd34061763cdcf596a3f82776d))
+
 # 1.0.0 (2025-06-19)
 
 
