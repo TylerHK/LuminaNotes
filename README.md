@@ -16,6 +16,17 @@
 Large media or binary assets are stored via **Git LFS**.
 A pre-commit hook and CI check block any file >5\u2009MB that is not LFS-tracked.
 
+### Agent Credentials
+The **Swarm\u00A0Steward** ChatGPT\u00A0Agent requires two repository secrets /
+environment variables to operate:
+
+| Variable | Scope | Purpose |
+|----------|-------|---------|
+| `GITHUB_TOKEN` | `repo` (contents:write, issues:write) | Push `agent/swarm\u2011updates` branch, comment on PRs |
+| `SENDGRID_API_KEY` | optional | Send daily digest email |
+
+If either variable is missing the Agent logs the error and retries in 6\u00A0h.
+
 ---
 
 ## Directory Overview
