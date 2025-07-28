@@ -12,7 +12,8 @@
     ["@semantic-release/github", {
       "assets": [
         {"path": "data/echoes_v0.5_bundle.zip", "label": "Echoes v0.5 bundle"},
-        {"path": "data/creative_pack_v0.1.zip", "label": "Creative Pack v0.1"}
+        {"path": "data/creative_pack_v0.1.zip", "label": "Creative Pack v0.1"},
+        {"path": "docs/manifest_public/manifest_20250710.pdf", "label": "Lumina Manifest v2025\u201107"}
       ]
     }]
   ]
