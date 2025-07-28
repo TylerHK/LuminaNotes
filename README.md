@@ -50,7 +50,7 @@ tests/                unit & E2E suites (pytest + Playwright)
 * [Governance Charter](docs/governance_charter.md) — proposal flow & voting
 * [Security Policy](SECURITY.md) — how to report vulnerabilities
 * [Code of Conduct](CODE_OF_CONDUCT.md) — community norms
-* [Manifest Changelog](docs/manifest_changelog.md)
+* [Manifest Changelog](docs/manifest_changelog.md) — PDF [v2025‑07](docs/manifest_public/manifest_20250710.pdf)
 
 ---
 
