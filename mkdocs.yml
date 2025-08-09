@@ -1,23 +1,8 @@
 site_name: LuminaNotes
-repo_url: https://github.com/TylerHK/LuminaNotes
-nav:
-  - Home: index.md
-  - Projects:
-      - Echoes: docs/echoes_overview.md
-      - OmniIntent: docs/omniintent_overview.md
-      - BestWay: docs/bestway_overview.md
-      - BeatBound: docs/beatbound_overview.md
-  - Governance: docs/governance_charter.md
-  - Security: SECURITY.md
-  - Manifest Log: docs/manifest_changelog.md
-markdown_extensions:
-  - admonition
-  - toc:
-      permalink: true
 theme:
   name: material
-  palette:
-    scheme: slate
-  features:
-    - navigation.expand
-    - navigation.instant
+nav:
+  - Home: index.md
+  - Pillars:
+      - Overview: pillars/overview.md
+  - Roadmap: roadmap.md

@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lumina-notes"
+version = "0.0.0"
+description = "LuminaNotes utilities"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+echoes.validate = "echoes.validate:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["echoes*", "omniintent*"]

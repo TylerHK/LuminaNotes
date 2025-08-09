@@ -15,6 +15,7 @@
 
 Large media or binary assets are stored via **Git LFS**.
 A pre-commit hook and CI check block any file >5\u2009MB that is not LFS-tracked.
+Run `pre-commit install` after cloning to enable the hooks.
 
 ### Agent Credentials
 The **Swarm\u00A0Steward** ChatGPT\u00A0Agent requires two repository secrets /
