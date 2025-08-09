@@ -6,16 +6,16 @@ on:
     paths:
       - 'mkdocs.yml'
       - 'docs/**'
-      - 'README.md'
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy --force
+      - name: Install dependencies
+        run: pip install mkdocs mkdocs-material
+      - name: Deploy
+        run: mkdocs gh-deploy --force
