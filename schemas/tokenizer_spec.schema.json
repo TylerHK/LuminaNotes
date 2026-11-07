@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OmniIntent tokenizer spec",
+  "type": "object",
+  "properties": {
+    "tokenizer": {"type": "string", "minLength": 1},
+    "vocab_size": {"type": "integer", "minimum": 1},
+    "special_tokens": {"type": "object", "additionalProperties": {"type": "string"}}
+  },
+  "required": ["tokenizer", "vocab_size", "special_tokens"]
+}
