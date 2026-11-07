@@ -22,6 +22,7 @@ RULES: list[tuple[str, str]] = [
     ("data/bestway_recipes/*.json", "bestway/schema/bestway_schema.json"),
     ("Lumina/*/metadata.json", "schemas/lumina_project_metadata.schema.json"),
     ("swarm_sync/*.json", "schemas/swarm_sync_record.schema.json"),
+    ("swarm_sync/swarm_index.json", "schemas/swarm_sync_index.schema.json"),
     ("src/omniintent/tokenizer_spec.json", "schemas/tokenizer_spec.schema.json"),
     ("tests/tokenizer_spec.json", "schemas/tokenizer_spec.schema.json"),
 ]
@@ -58,6 +59,9 @@ def check_rules(root: Path) -> tuple[list[str], int]:
             continue
         validator = Draft202012Validator(schema)
         for path in sorted(root.glob(pattern)):
+            # The generated index maps keywords to timestamps; it is not a packet.
+            if pattern == "swarm_sync/*.json" and path.name == "swarm_index.json":
+                continue
             rel = path.relative_to(root)
             try:
                 data = load_json(path)
@@ -65,7 +69,7 @@ def check_rules(root: Path) -> tuple[list[str], int]:
                 errors.append(f"{rel}: skipped schema check (unreadable JSON)")
                 continue
             checked += 1
-            for err in sorted(validator.iter_errors(data), key=lambda e: list(e.path)):
+            for err in sorted(validator.iter_errors(data), key=lambda e: tuple(str(p) for p in e.path)):
                 loc = "/".join(str(p) for p in err.path) or "<root>"
                 errors.append(f"{rel}: {loc}: {err.message} (schema {schema_rel})")
     return errors, checked

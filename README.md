@@ -99,7 +99,8 @@ their JSON Schema (rules live in `scripts/validate_records.py`):
 |---|---|
 | `data/bestway_recipes/*.json` | `bestway/schema/bestway_schema.json` |
 | `Lumina/*/metadata.json` | `schemas/lumina_project_metadata.schema.json` |
-| `swarm_sync/*.json` | `schemas/swarm_sync_record.schema.json` |
+| `swarm_sync/*.json` (packets, excluding index) | `schemas/swarm_sync_record.schema.json` |
+| `swarm_sync/swarm_index.json` | `schemas/swarm_sync_index.schema.json` |
 | `src/omniintent/tokenizer_spec.json`, `tests/tokenizer_spec.json` | `schemas/tokenizer_spec.schema.json` |
 
 ```bash

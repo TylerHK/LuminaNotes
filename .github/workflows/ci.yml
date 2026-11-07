@@ -21,6 +21,8 @@ jobs:
           pip install black ruff pytest jsonschema
       - name: Validate records against schemas
         run: python scripts/validate_records.py
+      - name: Test record validation gate
+        run: pytest -q tests/test_validate_records.py
       - name: Ruff
         run: ruff src || true
       - name: Black
