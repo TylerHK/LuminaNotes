@@ -88,8 +88,26 @@ npm i && npm run dev   # then open localhost:5173
 
 ### BestWay recipe ingest
 ```bash
-python bestway/CLI/ingest.py recipes/solar_dehydrator.md
+python bestway/CLI/ingest.py bestway/templates/solar_dehydrator.md
 ```
+
+### Record schema validation
+Every tracked `*.json` file must be well-formed, and these records must match
+their JSON Schema (rules live in `scripts/validate_records.py`):
+
+| Records | Schema |
+|---|---|
+| `data/bestway_recipes/*.json` | `bestway/schema/bestway_schema.json` |
+| `Lumina/*/metadata.json` | `schemas/lumina_project_metadata.schema.json` |
+| `swarm_sync/*.json` (packets, excluding index) | `schemas/swarm_sync_record.schema.json` |
+| `swarm_sync/swarm_index.json` | `schemas/swarm_sync_index.schema.json` |
+| `src/omniintent/tokenizer_spec.json`, `tests/tokenizer_spec.json` | `schemas/tokenizer_spec.schema.json` |
+
+```bash
+pip install jsonschema
+python scripts/validate_records.py
+```
+CI runs this check and fails on any error.
 
 ### SwarmSync (cross‑chat memory)
 

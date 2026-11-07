@@ -15,6 +15,8 @@ jobs:
           import json, glob, pathlib
           packets = []
           for p in glob.glob('swarm_sync/*.json'):
+              if pathlib.Path(p).name == 'swarm_index.json':
+                  continue
               packets.append(json.load(open(p)))
           # simple index {keyword: [timestamps]}
           index={}

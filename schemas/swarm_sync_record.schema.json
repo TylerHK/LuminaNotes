@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Swarm sync record",
+  "description": "Packets written by tools/swarm_sync.py; excludes generated swarm_index.json.",
+  "type": "object",
+  "properties": {
+    "keyword": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "pattern": "^\\d{8}_\\d{4}(\\d{2})?$"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "raw": {
+      "type": "string"
+    },
+    "source_chat": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "keyword",
+    "timestamp",
+    "summary",
+    "raw",
+    "source_chat"
+  ]
+}
